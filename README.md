@@ -13,7 +13,7 @@ t = displayio.TileGrid(ruler, pixel_shader=ruler.pixel_shader)
 g = displayio.Group()
 g.append(t)
 
-display.show(g)
+display.root_group = g
 
 display.refresh()
 
@@ -33,7 +33,7 @@ t = displayio.TileGrid(ruler, pixel_shader=ruler.pixel_shader)
 g = displayio.Group()
 g.append(t)
 
-display.show(g)
+display.root_group = g
 
 display.refresh()
 
@@ -57,7 +57,7 @@ t.y -= (ruler.height - display.height) // 2
 g = displayio.Group()
 g.append(t)
 
-display.show(g)
+display.root_group = g
 
 display.refresh()
 
